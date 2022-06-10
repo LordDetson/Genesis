@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane styleClass="form-pane"
+          stylesheets="@../css/main.css"
+          xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="by.babanin.genesis.gui.controller.GeneralSettingsController">
+
+    <Label text="Row count:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+    <TextField fx:id="rowCountField" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+    <Label text="Column count:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+    <TextField fx:id="columnCountField" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+</GridPane>

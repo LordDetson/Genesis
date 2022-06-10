@@ -1,0 +1,100 @@
+.label,
+.tab-label,
+.button,
+.toggle-button,
+.text-field,
+.combo-box,
+.tab-header-area .text,
+.titled-pane > .title > .text {
+    -fx-text-fill: #00bfff;
+    -fx-font-size: 16px;
+}
+
+.label, .tab-label, .button, .toggle-button {
+    -fx-effect: dropshadow(gaussian, black, 10, 0.2, 2, 2);
+}
+
+.combo-box {
+    -fx-max-width: 1000;
+}
+
+.tab-label {
+    -fx-font-size: 1em;
+}
+
+.tab,
+.tab-content-area,
+.tab-header-background,
+.tool-bar,
+.button,
+.toggle-button,
+.scroll-pane,
+.scroll-pane > .viewport,
+.scroll-bar,
+.corner,
+.color-picker,
+.titled-pane > .title,
+.titled-pane > .content {
+    -fx-background-color: transparent;
+}
+
+.thumb {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+}
+
+.button, .toggle-button, .text-field {
+    -fx-background-radius: null;
+}
+
+.button:hover, .toggle-button:hover {
+    -fx-background-color: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.toggle-button:selected {
+     -fx-background-color: linear-gradient(to right, gray, gray 5%, rgba(0, 0, 0, 0.5) 5%, transparent);
+}
+
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-color: linear-gradient(to right, rgba(254, 254, 254, 0.5), transparent);
+}
+
+.text-field, .combo-box, .list-cell {
+    -fx-text-fill: #B2D732;
+}
+
+.text-field, .combo-box, .color-picker, .color-picker:hover {
+    -fx-background-color: linear-gradient(to right, rgba(0, 0, 0, 0.8) 70%, transparent);
+}
+
+.form-pane {
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-padding: 10;
+    -fx-grid-lines-visible: false;
+}
+
+.color-picker {
+    -fx-effect: null;
+    -fx-color-label-visible: false;
+}
+
+.tab:selected {
+    -fx-border-color: #00bfff;
+    -fx-border-width: 3 0 0 0;
+}
+
+.tab:selected .focus-indicator {
+    -fx-border-color: null;
+}
+
+.titled-pane {
+    -fx-collapsible: false;
+    -fx-text-fill: #00bfff;
+}
+
+.titled-pane > .title,
+.titled-pane > .content {
+    -fx-border-color: #00bfff;
+    -fx-border-width: 1;
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane stylesheets="@../css/main.css, @../css/main_menu.css"
+           xmlns="http://javafx.com/javafx/8"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="by.babanin.genesis.gui.controller.MainMenuController">
+    <StackPane fx:id="backgroundPane" />
+    <BorderPane fx:id="mainPane">
+        <top>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="8.0" text="Genesis" />
+            </HBox>
+        </top>
+        <left>
+            <VBox fx:id="menuPane" prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER"
+                  alignment="CENTER">
+                <ToggleButton fx:id="showSettingsButton" text="Settings" onAction="#showPane" selected="true">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="menuToggleGroup" />
+                    </toggleGroup>
+                </ToggleButton>
+                <Separator styleClass="manuSeparator" />
+                <Button text="Quit" onAction="#quit" />
+            </VBox>
+        </left>
+    </BorderPane>
+</StackPane>

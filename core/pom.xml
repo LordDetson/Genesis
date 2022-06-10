@@ -9,25 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>gui</artifactId>
+    <artifactId>core</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>by.babanin.genesis</groupId>
-            <artifactId>core</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.almasb</groupId>
-            <artifactId>fxgl</artifactId>
-        </dependency>
-        <dependency>
             <groupId>net.rgielen</groupId>
             <artifactId>javafx-weaver-springboot-starter-sample</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
         </dependency>
     </dependencies>
 

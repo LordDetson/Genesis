@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane styleClass="form-pane"
+          stylesheets="@../css/main.css"
+          xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="by.babanin.genesis.gui.controller.BiomeSettingsController">
+    
+    <Label text="Level" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+    <Label text="Energy cost" GridPane.rowIndex="0" GridPane.columnIndex="2" />
+    <Label text="Color" GridPane.rowIndex="0" GridPane.columnIndex="3" />
+
+    <Label text="Deep see" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+    <TextField fx:id="deepSeeLevel" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+    <TextField fx:id="deepSeeEnergyCost" GridPane.rowIndex="1" GridPane.columnIndex="2" />
+    <ColorPicker fx:id="deepSeeColor" styleClass="button" GridPane.rowIndex="1" GridPane.columnIndex="3" />
+
+    <Label text="See" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+    <TextField fx:id="seeLevel" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+    <TextField fx:id="seeEnergyCost" GridPane.rowIndex="2" GridPane.columnIndex="2" />
+    <ColorPicker fx:id="seeColor" styleClass="button" GridPane.rowIndex="2" GridPane.columnIndex="3" />
+
+    <Label text="Coast" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+    <TextField fx:id="coastLevel" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+    <TextField fx:id="coastEnergyCost" GridPane.rowIndex="3" GridPane.columnIndex="2" />
+    <ColorPicker fx:id="coastColor" styleClass="button" GridPane.rowIndex="3" GridPane.columnIndex="3" />
+
+    <Label text="Plains" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+    <TextField fx:id="plainsLevel" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+    <TextField fx:id="plainsEnergyCost" GridPane.rowIndex="4" GridPane.columnIndex="2" />
+    <ColorPicker fx:id="plainsColor" styleClass="button" GridPane.rowIndex="4" GridPane.columnIndex="3" />
+
+    <Label text="Hills" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+    <TextField fx:id="hillsLevel" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+    <TextField fx:id="hillsEnergyCost" GridPane.rowIndex="5" GridPane.columnIndex="2" />
+    <ColorPicker fx:id="hillsColor" styleClass="button" GridPane.rowIndex="5" GridPane.columnIndex="3" />
+
+    <Label text="Mountains" GridPane.rowIndex="6" GridPane.columnIndex="0" />
+    <TextField fx:id="mountainsLevel" GridPane.rowIndex="6" GridPane.columnIndex="1" />
+    <TextField fx:id="mountainsEnergyCost" GridPane.rowIndex="6" GridPane.columnIndex="2" />
+    <ColorPicker fx:id="mountainsColor" styleClass="button" GridPane.rowIndex="6" GridPane.columnIndex="3" />
+
+    <Label text="High mountains" GridPane.rowIndex="7" GridPane.columnIndex="0" />
+    <TextField fx:id="highMountainsLevel" GridPane.rowIndex="7" GridPane.columnIndex="1" editable="false"/>
+    <TextField fx:id="highMountainsEnergyCost" GridPane.rowIndex="7" GridPane.columnIndex="2" />
+    <ColorPicker fx:id="highMountainsColor" styleClass="button" GridPane.rowIndex="7" GridPane.columnIndex="3" />
+    
+</GridPane>

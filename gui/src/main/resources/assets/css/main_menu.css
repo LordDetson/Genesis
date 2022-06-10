@@ -1,0 +1,17 @@
+#backgroundPane {
+    -fx-background-image: url("/assets/textures/stars_sky.jpg");
+    -fx-background-size: cover;
+}
+#mainPane {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+}
+
+#titleLabel {
+    -fx-font-size: 5em;
+}
+
+#menuPane > .button,
+#menuPane > .toggle-button {
+    -fx-pref-width: 1000;
+    -fx-font-size: 2em;
+}
