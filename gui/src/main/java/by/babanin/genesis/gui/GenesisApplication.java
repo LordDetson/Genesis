@@ -19,6 +19,8 @@ public class GenesisApplication extends GameApplication {
 
     @Override
     public void initSettings(GameSettings settings) {
+        initializeSpringApplicationContext();
+
         settings.setTitle("Genesis");
         settings.setWidth(APP_WIDTH);
         settings.setHeight(APP_HEIGHT);
@@ -27,13 +29,16 @@ public class GenesisApplication extends GameApplication {
 
     @Override
     protected void initGame() {
-        initializeSpringApplicationContext();
+        addApplicationContextClosing();
     }
 
     private void initializeSpringApplicationContext() {
         applicationContext = new SpringApplicationBuilder()
                 .sources(GenesisLauncher.class)
                 .run(GenesisLauncher.getArguments());
+    }
+
+    private void addApplicationContextClosing() {
         getPrimaryStage().setOnCloseRequest(event -> applicationContext.close());
     }
 }
