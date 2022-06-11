@@ -25,7 +25,6 @@ public class MainMenuController implements Initializable {
     public BorderPane mainPane;
     public ToggleGroup menuToggleGroup;
     public ToggleButton showSettingsButton;
-    public ToggleButton showOptionsButton;
 
     public MainMenuController(FxControllerAndView<SettingsController, BorderPane> settingsCtrlAndView) {
         this.settingsCtrlAndView = settingsCtrlAndView;
@@ -34,6 +33,11 @@ public class MainMenuController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         settingsCtrlAndView.getView().ifPresent(centerPane -> mainPane.setCenter(centerPane));
+        menuToggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
+            if(newValue == null) {
+                menuToggleGroup.selectToggle(oldValue);
+            }
+        });
     }
 
     public void showPane(ActionEvent actionEvent) {
