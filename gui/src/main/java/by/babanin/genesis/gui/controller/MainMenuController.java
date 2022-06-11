@@ -40,13 +40,20 @@ public class MainMenuController implements Initializable {
         });
     }
 
-    public void showPane(ActionEvent actionEvent) {
+    public void showContentPane(ActionEvent actionEvent) {
         Object source = actionEvent.getSource();
         Node centerPane = null;
         if(source == showSettingsButton) {
             centerPane = settingsCtrlAndView.getView().get();
         }
         mainPane.setCenter(centerPane);
+        if(centerPane != null) {
+            centerPane.requestFocus();
+        }
+    }
+
+    public Node getCurrentContentPane() {
+        return mainPane.getCenter();
     }
 
     public void quit(ActionEvent actionEvent) {

@@ -24,7 +24,7 @@
         <left>
             <VBox fx:id="menuPane" prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER"
                   alignment="CENTER">
-                <ToggleButton fx:id="showSettingsButton" text="Settings" onAction="#showPane" selected="true">
+                <ToggleButton fx:id="showSettingsButton" text="Settings" onAction="#showContentPane" selected="true">
                     <toggleGroup>
                         <ToggleGroup fx:id="menuToggleGroup" />
                     </toggleGroup>

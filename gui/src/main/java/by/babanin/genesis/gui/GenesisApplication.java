@@ -15,6 +15,7 @@ import com.almasb.fxgl.entity.components.TransformComponent;
 import by.babanin.genesis.GenesisLauncher;
 import by.babanin.genesis.core.World;
 import by.babanin.genesis.core.cell.TerrainCell;
+import by.babanin.genesis.gui.controller.MainMenuController;
 import by.babanin.genesis.gui.dto.TerrainSettings;
 import by.babanin.genesis.gui.entity.TerrainCellEntityFactory;
 import by.babanin.genesis.gui.scene.CustomSceneFactory;
@@ -48,6 +49,13 @@ public class GenesisApplication extends GameApplication {
     @Override
     protected void onPreInit() {
         getGameController().gotoMainMenu();
+        focusCurrentContentPane();
+    }
+
+    private void focusCurrentContentPane() {
+        MainMenuController mainMenuController = applicationContext.getBean(MainMenuController.class);
+        Node currentContentPane = mainMenuController.getCurrentContentPane();
+        currentContentPane.requestFocus();
     }
 
     @Override
