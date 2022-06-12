@@ -13,19 +13,16 @@
           xmlns:fx="http://javafx.com/fxml"
           fx:controller="by.babanin.genesis.gui.controller.TerrainSettingsController">
 
-    <Label text="Radius of hexagon:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
-    <TextField fx:id="radiusOfHexagonFiled" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+    <Label text="World height:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+    <TextField fx:id="worldHeightField" GridPane.rowIndex="0" GridPane.columnIndex="1" />
 
-    <Label text="World height:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
-    <TextField fx:id="worldHeightField" GridPane.rowIndex="1" GridPane.columnIndex="1" />
-
-    <TitledPane text="Biome settings" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="3">
+    <TitledPane text="Biome settings" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="3">
         <fx:include source="biome_settings.fxml" />
     </TitledPane>
 
-    <Label text="Algorithm of terrain generation:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
-    <ComboBox fx:id="algorithmComboBox" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+    <Label text="Algorithm of terrain generation:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+    <ComboBox fx:id="algorithmComboBox" GridPane.rowIndex="2" GridPane.columnIndex="1" />
 
-    <Group fx:id="algorithmContent" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="3" />
+    <Group fx:id="algorithmContent" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="3" />
 
 </GridPane>

@@ -1,7 +1,6 @@
 package by.babanin.genesis.gui.controller;
 
 import java.net.URL;
-import java.text.DecimalFormat;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -10,7 +9,6 @@ import org.springframework.stereotype.Component;
 import by.babanin.genesis.gui.NoiseAlgorithmItem;
 import by.babanin.genesis.gui.converter.NoiseAlgorithmItemConverter;
 import by.babanin.genesis.gui.dto.TerrainSettings;
-import by.babanin.genesis.gui.formatter.FloatFormatter;
 import by.babanin.genesis.gui.formatter.IntegerFormatter;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
@@ -28,8 +26,6 @@ import net.rgielen.fxweaver.core.FxmlView;
 @Component
 @FxmlView("/assets/views/terrain_settings.fxml")
 public class TerrainSettingsController implements Initializable {
-
-    public TextField radiusOfHexagonFiled;
     public TextField worldHeightField;
     public ComboBox<NoiseAlgorithmItem> algorithmComboBox;
 
@@ -45,14 +41,8 @@ public class TerrainSettingsController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        setupRadiusOfHexagonFiled();
         setupWorldHeightField();
         setupAlgorithmComboBox();
-    }
-
-    private void setupRadiusOfHexagonFiled() {
-        radiusOfHexagonFiled.setTextFormatter(new FloatFormatter());
-        radiusOfHexagonFiled.textProperty().bindBidirectional(terrainSettings.radiusOfHexagonProperty(), new DecimalFormat());
     }
 
     private void setupWorldHeightField() {

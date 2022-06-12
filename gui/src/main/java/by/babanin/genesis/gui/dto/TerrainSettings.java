@@ -12,33 +12,18 @@ import javafx.beans.property.SimpleObjectProperty;
 @Component
 public class TerrainSettings {
 
-    private static final float DEFAULT_RADIUS_OF_HEXAGON = 1;
     private static final NoiseAlgorithmItem DEFAULT_NOISE_ALGORITHM = NoiseAlgorithmItem.SIMPLEX_NOISE;
     private static final float DEFAULT_OFFSET = 0.021f;
     public static final int DEFAULT_WORLD_HEIGHT = 70;
 
-    private final SimpleFloatProperty radiusOfHexagon;
     private final SimpleObjectProperty<Optional<NoiseAlgorithmItem>> noiseAlgorithmItem;
     private final SimpleFloatProperty noiseAlgorithmOffset;
     private final SimpleIntegerProperty worldHeight;
 
     public TerrainSettings() {
-        this.radiusOfHexagon = new SimpleFloatProperty(DEFAULT_RADIUS_OF_HEXAGON);
         this.noiseAlgorithmItem = new SimpleObjectProperty<>(Optional.of(DEFAULT_NOISE_ALGORITHM));
         this.noiseAlgorithmOffset = new SimpleFloatProperty(DEFAULT_OFFSET);
         this.worldHeight = new SimpleIntegerProperty(DEFAULT_WORLD_HEIGHT);
-    }
-
-    public float getRadiusOfHexagon() {
-        return radiusOfHexagon.get();
-    }
-
-    public SimpleFloatProperty radiusOfHexagonProperty() {
-        return radiusOfHexagon;
-    }
-
-    public void setRadiusOfHexagon(float radiusOfHexagon) {
-        this.radiusOfHexagon.set(radiusOfHexagon);
     }
 
     public Optional<NoiseAlgorithmItem> getNoiseAlgorithmItem() {

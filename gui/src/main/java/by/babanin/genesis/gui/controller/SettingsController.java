@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 
 import org.springframework.stereotype.Component;
 
+import by.babanin.genesis.gui.dto.GeneralSettings;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.input.KeyCode;
@@ -19,7 +20,14 @@ public class SettingsController implements Initializable {
 
     public BorderPane settingsPane;
 
+    private final GeneralSettings generalSettings;
+
+    public SettingsController(GeneralSettings generalSettings) {
+        this.generalSettings = generalSettings;
+    }
+
     public void generateWorld(ActionEvent actionEvent) {
+        generalSettings.calculateRadiusOfHexagon();
         getGameController().startNewGame();
     }
 

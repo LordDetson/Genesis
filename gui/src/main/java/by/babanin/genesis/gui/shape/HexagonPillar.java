@@ -17,7 +17,7 @@ public class HexagonPillar extends Group {
 
     private final List<Shape3D> shapes = new ArrayList<>();
 
-    public HexagonPillar(double x, double z, float radius, float height) {
+    public HexagonPillar(float radius, float height, double x, double z) {
         this.x = x;
         this.z = z;
         hexagonTop = new FlatHexagon(radius);
@@ -25,10 +25,15 @@ public class HexagonPillar extends Group {
         hexagonTop.rx.setAngle(-90);
         shapes.add(hexagonTop);
 
-        hexagonPillarBase = new HexagonPillarBase(radius, height);
-        shapes.add(hexagonPillarBase);
+        if(height == 0) {
+            hexagonPillarBase = new HexagonPillarBase(radius, height);
+            shapes.add(hexagonPillarBase);
+        }
+        else {
+            hexagonPillarBase = null;
+        }
 
-        getChildren().addAll(hexagonTop, hexagonPillarBase);
+        getChildren().addAll(shapes);
         setDrawMode(DrawMode.FILL);
     }
 
